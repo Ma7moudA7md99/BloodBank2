@@ -58,7 +58,7 @@ ul {
 .content {
   position: relative;
 }
-.content .right {
+.content .info {
   display: flex;
   display: none;
   position: absolute;
@@ -67,18 +67,18 @@ ul {
   top: 230px;
   left: 10%;
 }
-.content .right .text {
+.content .info .text {
   padding-left: 100px;
   text-transform: uppercase;
 }
-.content .right .text h1 {
+.content .info .text h1 {
   width: 200px;
   letter-spacing: 9px;
   margin-top: 10px;
 }
 /* end logo */
 /* start sign in */
-.content .left {
+.content .right {
   display: none;
   position: absolute;
   background-color: white;
@@ -89,14 +89,14 @@ ul {
   border-radius: 10px;
   border: 1px solid var(--main-color);
 }
-.content .left .sign-in form {
+.content .right .sign-in form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   align-items: center;
 }
-.content .left .sign-in input {
+.content .right .sign-in input {
   padding-left: 10px;
   border-radius: 20px;
   width: 80%;
@@ -104,19 +104,38 @@ ul {
   font-size: 18px;
   border: 1px solid var(--main-color);
 }
-.content .left .sign-in input::placeholder {
+.content .right .sign-in input::placeholder {
   color: rgb(0, 0, 0, 80%);
 }
-.content .left .sign-in input[type="submit"] {
+.content .right .sign-in input[type="submit"] {
   background-color: #a30101;
   color: white;
 }
-.content .left .sign-in input[type="submit"]:hover {
+.content .right .sign-in input[type="submit"]:hover {
   cursor: pointer;
 }
-.content .left .sign-in span a {
+.content .right .sign-in span a {
   color: var(--main-color);
   font-weight: bold;
+}
+@media (max-width: 992px) {
+  .content .info {
+    left: 5%;
+  }
+  .content .right {
+    right: 10%;
+  }
+}
+@media (max-width: 876px) {
+  .content .right {
+    right: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .content .right {
+    right: 50%;
+    transform: translate(50%, -10%);
+  }
 }
 /* end sign in */
 /* overlay */
@@ -198,5 +217,25 @@ ul {
 }
 .sign-up input[type="submit"]:hover {
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .sign-up form {
+    left: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .sign-up form {
+    width: 350px;
+    height: 550px;
+    top: 60px;
+    left: 4%;
+  }
+  .sign-up form .private,
+  .sign-up form .Type-Gender {
+    margin-left: 10%;
+  }
+  .sign-up form .Type-Gender label {
+    margin-left: 17%;
+  }
 }
 /* end sign up */
