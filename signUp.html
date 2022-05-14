@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- normalize css file -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/signUP.css" />
+    <title>Blood Bank</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="info">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="text">
+          <h1>our mission</h1>
+          "Helping People As Much As We Can"
+        </div>
+      </div>
+    </div>
+    <div class="sign-up">
+      <form class="signUpForm">
+        <h1>Sign Up</h1>
+        <div class="name">
+          <input type="text" name="fName" placeholder="First Name" required />
+          <input type="text" name="lName" placeholder="Last Name" required />
+        </div>
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="confirm Password"
+          required
+        />
+        <div class="age">
+          <input type="text" name="year" placeholder="Year" required />
+          <input type="text" name="month" placeholder="Month" required />
+          <input type="text" name="day" placeholder="Day" required />
+        </div>
+        <div class="Type-Gender">
+          <label for="Account-Type">Account Type : </label>
+          <select name="donor" id="Account-Type">
+            <option value="Donor">Donor</option>
+            <option value="Need">Need</option>
+          </select>
+          <label for="gender">Gender : </label>
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="private">
+          <input type="checkbox" name="privacy" id="privacy" required />
+          <label for="privacy">Accept Privacy Statements</label>
+        </div>
+        <input type="submit" value="Sign Up" />
+      </form>
+    </div>
+  </body>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/signUp.js"></script>
+</html>

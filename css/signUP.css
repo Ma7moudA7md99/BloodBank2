@@ -77,26 +77,36 @@ ul {
   margin-top: 10px;
 }
 /* end logo */
-/* start sign in */
-.content .right {
+/* start sign up */
+.sign-up {
   display: none;
-  position: absolute;
-  background-color: white;
-  top: 230px;
-  right: 15%;
-  width: 320px;
-  height: 300px;
-  border-radius: 10px;
-  border: 1px solid var(--main-color);
 }
-.content .right .sign-in form {
+.sign-up form {
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
   align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 110px;
+  right: 10%;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid var(--main-color);
+  z-index: 2;
 }
-.content .right .sign-in input {
+.sign-up form i {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  color: var(--main-color);
+}
+.sign-up form h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.sign-up input {
   padding-left: 10px;
   border-radius: 20px;
   width: 80%;
@@ -104,37 +114,61 @@ ul {
   font-size: 18px;
   border: 1px solid var(--main-color);
 }
-.content .right .sign-in input::placeholder {
+.sign-up .name {
+  margin-left: 10%;
+}
+.sign-up .name input {
+  width: 42%;
+  align-items: center;
+}
+.sign-up .name input:not(:first-of-type) {
+  margin-left: 4%;
+}
+.sign-up .age {
+  margin-left: 10%;
+}
+.sign-up .age input {
+  width: 27%;
+  align-items: center;
+}
+.sign-up .age input:not(:first-of-type) {
+  margin-left: 2.9%;
+}
+.sign-up input::placeholder {
   color: rgb(0, 0, 0, 80%);
 }
-.content .right .sign-in input[type="submit"] {
+.sign-up input[type="submit"] {
   background-color: #a30101;
   color: white;
 }
-.content .right .sign-in input[type="submit"]:hover {
+.sign-up form .private {
+  margin-left: -35%;
+}
+.sign-up input[type="checkbox"] {
+  height: inherit;
+  width: auto;
+}
+.sign-up input[type="submit"]:hover {
   cursor: pointer;
 }
-.content .right .sign-in span a {
-  color: var(--main-color);
-  font-weight: bold;
-}
 @media (max-width: 992px) {
-  .content .info {
-    left: 5%;
-  }
-  .content .right {
-    right: 10%;
+  .sign-up form {
+    left: 25%;
   }
 }
-@media (max-width: 876px) {
-  .content .right {
-    right: 5%;
+@media (max-width: 767px) {
+  .sign-up form {
+    width: 350px;
+    height: 550px;
+    top: 60px;
+    left: 4%;
+  }
+  .sign-up form .private,
+  .sign-up form .Type-Gender {
+    margin-left: 10%;
+  }
+  .sign-up form .Type-Gender label {
+    margin-left: 17%;
   }
 }
-@media (max-width: 768px) {
-  .content .right {
-    right: 50%;
-    transform: translate(50%, -10%);
-  }
-}
-/* end sign in */
+/* end sign up */
