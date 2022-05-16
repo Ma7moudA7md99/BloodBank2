@@ -11,46 +11,273 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <!-- font awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- normalize css file -->
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <title>Blood Bank</title>
   </head>
   <body>
-    <div class="content">
-      <div class="info">
+    <!-- start header -->
+    <div class="header">
+      <div class="container">
         <div class="logo">
-          <img src="images/logo.png" alt="" />
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
         </div>
-        <div class="text">
-          <h1>our mission</h1>
-          "Helping People As Much As We Can"
+        <div class="links">
+          <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#footer">contact</a></li>
+          </ul>
         </div>
+        <i class="fa-solid fa-bars" id="phoneIcon"></i>
       </div>
-      <div class="right">
+      <hr />
+    </div>
+    <!-- end header -->
+    <!-- start slider -->
+    <div class="container" id="home">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/طرق_سحب_عينات_الدم.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/ما_هو_الدم.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/مكونات_الدم.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/مكونات_الدم_ووظائفها.jpg" alt="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <!-- end slider -->
+    <!-- start sign card-->
+    <div class="container">
+      <div class="sign-card">
         <div class="sign-in">
-          <form>
-            <h1>Sign In</h1>
-            <input type="text" name="email" placeholder="Email" required />
-            <input
-              type="password"
-              name="pass"
-              placeholder="Password"
-              required
-            />
-            <input type="submit" value="Sign In" />
-            <span
-              >create a new account
-              <a href="signUp.html" id="signUp">sign up?</a></span
-            >
-          </form>
+          <h3>First time to donate?</h3>
+          blood donation: It is a voluntary medical procedure in which blood or
+          one of its compounds is transferred from a healthy person to a sick
+          person who needs blood <br />
+          <a href="signUp.html">Sign Up...</a> <br />
+          <h3>Old donor</h3>
+          You are allowed to donate blood only 5 times per year. <br />
+          <a href="signIn.html">Sign In...</a>
+        </div>
+        <div class="sign-up">
+          <h3>Do you need blood?</h3>
+          If you need blood, you just have to log in to get the type you want
+          <br />
+          <a href="signIn.html">Sign In...</a>
         </div>
       </div>
     </div>
+    <!-- end sign card-->
+    <!-- start about -->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="special-head">
+          <h1>about</h1>
+          <p>Blood makes up 70% of the body weight.</p>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h1>What Is Blood ?</h1>
+            <p>
+              "Blood" is a fluid in the human body and other animals that
+              transports essential substances such as nutrients and oxygen to
+              cells and transports metabolic wastes such as carbon dioxide.
+            </p>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="face front">
+                <h2>Blood Type "A"</h2>
+                <div class="icon">
+                  <i class="fa-solid fa-a"></i>
+                </div>
+                <p>
+                  It has antibiotics in the red blood cells of the blood type A
+                  with antibodies to the blood type B in the plasma.
+                </p>
+              </div>
+              <div class="face back">
+                <h2>Blood Type "A"</h2>
+                <div class="icon">
+                  <i class="fa-solid fa-a"></i>
+                </div>
+                <p>
+                  The blood type A is divided into A-, A+. <br />
+                  A- is rare by : 6.3% <br />
+                  A+ is rare by : 35.7% <br />
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="face front">
+                <h2>Blood Type "B"</h2>
+                <div class="icon">
+                  <i class="fa-solid fa-b"></i>
+                </div>
+                <p>
+                  It has antibiotics in the red blood cells of the blood type B
+                  with antibodies to the blood type A in the plasma.
+                </p>
+              </div>
+              <div class="face back">
+                <h2>Blood Type "B"</h2>
+                <div class="icon">
+                  <i class="fa-solid fa-b"></i>
+                </div>
+                <p>
+                  The blood type B is divided into B-, B+. <br />
+                  B- is rare by : 1.5% <br />
+                  B+ is rare by : 8.5% <br />
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="face front">
+                <h2>Blood Type "AB"</h2>
+                <div class="icon">AB</div>
+                <p>
+                  It has antibiotics in the red blood cells for the A and B
+                  species, but there are no antibodies.
+                </p>
+              </div>
+              <div class="face back">
+                <h2>Blood Type "AB"</h2>
+                <div class="icon">AB</div>
+                <p>
+                  The blood type AB is divided into AB-, AB+. <br />
+                  AB- is rare by : 0.6% <br />
+                  AB+ is rare by : 3.4% <br />
+                </p>
+              </div>
+            </div>
+            <div class="card" id="my">
+              <div class="face front">
+                <h2>Blood Type "O"</h2>
+                <div class="icon">
+                  <i class="fa-solid fa-o"></i>
+                </div>
+                <p>
+                  It does not have antibiotics, but it has both the antibodies
+                  to the A and B in the plasma.
+                </p>
+              </div>
+              <div class="face back">
+                <h2>Blood Type "O"</h2>
+                <div class="icon">
+                  <i class="fa-solid fa-o"></i>
+                </div>
+                <p>
+                  The blood type O is divided into O-, O+. <br />
+                  O- is rare by : 6.6% <br />
+                  O+ is rare by : 37.4% <br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end about -->
+    <!-- start info -->
+    <div class="info">
+      <div class="container">
+        <div class="special-head">
+          <h1>information</h1>
+          <p>Donation blood can save life.</p>
+        </div>
+        <div class="content">
+          <div class="text1">
+            <h1>Blood Donation</h1>
+            <p>
+              It is a voluntary medical procedure in which blood or one of its
+              compounds is transferred from a healthy person to a sick person
+              who needs blood. This procedure is needed by millions of people
+              every year; It is used during surgery, accidents, or some diseases
+              that require transfusion of some blood components.
+            </p>
+          </div>
+          <div class="ved">
+            <video
+              controls
+              muted
+              width="555px"
+              src="images/Blood Donation, American Red Cross - Stop-motion animation_Trim.mp4"
+              type="video/mp4"
+            ></video>
+          </div>
+          <div class="ved">
+            <video
+              controls
+              muted
+              src="images/Blood Donation Guide.mp4"
+              type="video/mp4"
+            ></video>
+          </div>
+          <div class="text2">
+            <h1>Why donate blood?</h1>
+            <p>
+              Donating blood is a noble humanitarian act; Because it contributes
+              to saving the lives of thousands of patients who are in dire need
+              of blood transfusions; In fact, one out of every ten patients
+              admitted to the hospital needs a blood transfusion, especially
+              patients who suffer from malignant or incurable diseases, as well
+              as people who are exposed to serious accidents as a result of
+              which they lost a large amount of blood, as well as many patients
+              during major surgeries, in addition to that.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end info -->
+    <!-- start footer -->
+    <div class="footer" id="footer">
+      <div class="container">
+        <div class="content">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div class="links">
+            <a href="aboutTeam.html">Us</a>
+            <a href="#about">about</a>
+            <a href="#home">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/login.js"></script>
+  <script src="js/home.js"></script>
 </html>
