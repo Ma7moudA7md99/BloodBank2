@@ -1,7 +1,12 @@
 // links display in phone screen
+// function my() {
+//   var elements = document.getElementById("links");
+//   elements.classList.toggle("flex");
+// }
 $(document).ready(() => {
   $("#phoneIcon").click(() => {
     $(".links").css({ display: "flex" });
+    // my();
   });
 });
 // card rotation

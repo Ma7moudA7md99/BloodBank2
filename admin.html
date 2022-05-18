@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- normalize css file -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/admin.css" />
+    <title>Blood Bank</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="links disNone" id="links">
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="index.html#about">about</a></li>
+            <li><a href="#footer">contact</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" id="phoneIcon"></i>
+      </div>
+      <hr />
+    </div>
+    <!-- end header -->
+    <!-- start content -->
+    <div class="dashboard">
+      <div class="container">
+        <!-- start users -->
+        <div class="users" id="usersDiv">
+          <h1>Users</h1>
+          <table>
+            <tr>
+              <th>User Name</th>
+              <th>PassWord</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Blood Type</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td class="last-col">0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td class="last-col">0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td class="last-col">0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td class="last-col">0</td>
+            </tr>
+            <tr>
+              <td class="last-row">0</td>
+              <td class="last-row">0</td>
+              <td class="last-row">0</td>
+              <td class="last-row">0</td>
+              <td class="last-row last-col">0</td>
+            </tr>
+          </table>
+        </div>
+        <div class="btn-user active">
+          <button onclick="displayUser()">Users</button>
+        </div>
+        <!-- end users -->
+        <!-- start staff -->
+        <div class="staff" id="staffDiv">
+          <h1>Staff</h1>
+          <table>
+            <tr id="first">
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Blood Type</th>
+              <th>Role</th>
+              <th>Salary</th>
+            </tr>
+            <tr>
+              <td class="email">omarAhmed@gmail.com</td>
+              <td class="tablePhone">010xxxxxxxx</td>
+              <td class="tableBlood">A+</td>
+              <td class="tableRole">Nurse</td>
+              <td class="tableSalary last-col">2000$</td>
+            </tr>
+            <tr>
+              <td class="email">arwaMohamed@gmail.com</td>
+              <td class="tablePhone">011xxxxxxxx</td>
+              <td class="tableBlood">O+</td>
+              <td class="tableRole">Doctor</td>
+              <td class="tableSalary last-col">5000$</td>
+            </tr>
+            <tr>
+              <td class="email">amirZaid@gmail.com</td>
+              <td class="tablePhone">015xxxxxxxx</td>
+              <td class="tableBlood">AB-</td>
+              <td class="tableRole">Doctor</td>
+              <td class="tableSalary last-col">5000$</td>
+            </tr>
+            <tr>
+              <td class="last-row email">marwaOmar@gmail.com</td>
+              <td class="tablePhone last-row">012xxxxxxxx</td>
+              <td class="tableBlood last-row">B-</td>
+              <td class="tableRole last-row">Nurse</td>
+              <td class="tableSalary last-row last-col">2000$</td>
+            </tr>
+          </table>
+          <div class="control-staff">
+            <div class="select-control">
+              <label for="update">Update Staff</label>
+              <input
+                type="radio"
+                name="choice"
+                id="update"
+                value="update"
+                onclick="updateTools()"
+              />
+              <label for="add">Add Employee</label>
+              <input
+                type="radio"
+                name="choice"
+                id="add"
+                value="add"
+                onclick="addTools()"
+              />
+            </div>
+            <div class="control-tools">
+              <input
+                type="text"
+                name="email"
+                id="mail"
+                placeholder="  E-mail"
+              />
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                placeholder="  Phone Number"
+              />
+              <select name="Blood Group" id="bloodEdit">
+                <option selected hidden disabled>Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+              <input type="text" name="role" id="role" placeholder="  Role" />
+              <input
+                type="text"
+                name="salary"
+                id="salary"
+                placeholder="  Salary"
+              />
+              <button id="updateBtn" onclick="update()">Submit</button>
+              <button id="addBtn" onclick="add()">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn-staff">
+          <button onclick="displayStaff()">Staff</button>
+        </div>
+        <!-- end staff -->
+        <!-- start quantities -->
+        <div class="quantities" id="quantitiesDiv">
+          <h1>Blood Types</h1>
+          <table>
+            <tr>
+              <th>Blood Type</th>
+              <th>Quantity</th>
+            </tr>
+            <tr>
+              <td>A+</td>
+              <td class="last-col" id="A+">1</td>
+            </tr>
+            <tr>
+              <td>A-</td>
+              <td class="last-col" id="A-">1</td>
+            </tr>
+            <tr>
+              <td>B+</td>
+              <td class="last-col" id="B+">1</td>
+            </tr>
+            <tr>
+              <td>B-</td>
+              <td class="last-col" id="B-">1</td>
+            </tr>
+            <tr>
+              <td>AB+</td>
+              <td class="last-col" id="AB+">1</td>
+            </tr>
+            <tr>
+              <td>AB-</td>
+              <td class="last-col" id="AB-">1</td>
+            </tr>
+            <tr>
+              <td>O+</td>
+              <td class="last-col" id="O+">1</td>
+            </tr>
+            <tr>
+              <td class="last-row">O-</td>
+              <td class="last-row last-col" id="O-">1</td>
+            </tr>
+          </table>
+          <!-- start control -->
+          <div class="control">
+            <select name="Blood Group" id="typeChoice">
+              <option selected hidden disabled>Blood Type</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              placeholder="Quantity"
+            />
+            <button onclick="updateQuantities()">Submit</button>
+          </div>
+          <!-- end control -->
+        </div>
+        <div class="btn-quantity">
+          <button onclick="displayQuantities()">Blood Types</button>
+        </div>
+        <!-- end quantities -->
+      </div>
+    </div>
+    <!-- end content -->
+    <!-- start footer -->
+    <div class="footer" id="footer">
+      <div class="container">
+        <div class="content">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div class="links">
+            <a href="aboutTeam.html">Us</a>
+            <a href="#about">about</a>
+            <a href="#home">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+  </body>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/admin.js"></script>
+</html>

@@ -169,6 +169,12 @@ hr {
 .photos {
   position: relative;
 }
+.photos #first {
+  transform: rotate(15deg);
+  position: absolute;
+  right: 50px;
+  z-index: -1;
+}
 .photos #sec {
   width: 400px;
   position: absolute;
@@ -180,23 +186,60 @@ hr {
 /* start content */
 .form-content form {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   width: 50%;
   height: 500px;
-  align-items: center;
   background-color: #a301010d;
   margin: 69px auto;
   border: 1px solid var(--main-color);
   border-radius: var(--radius);
 }
+.form-content form p {
+  color: var(--main-color);
+  font-size: 12px;
+}
+.form-content form div {
+  height: fit-content;
+}
 .form-content form input,
 .form-content form select {
-  width: 180px;
+  width: 200px;
   height: 25px;
   border: 1px solid var(--main-color);
   border-radius: var(--radius);
   padding-left: 10px;
+}
+.form-content form .diseases {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form-content form .serv {
+  width: 100%;
+  margin-left: 25%;
+}
+.form-content form .serv #free {
+  margin-right: 15%;
+}
+.form-content form .pay-method {
+  width: 100%;
+  height: fit-content;
+  margin-left: 32.5%;
+}
+.form-content form .pay-method #visa {
+  display: none;
+}
+.form-content form input[type="submit"] {
+  width: 80%;
+}
+.form-content form input[type="checkbox"],
+.form-content form input[type="radio"] {
+  width: 10px;
+  display: inline-block;
 }
 .form-content form input:focus,
 .form-content form select:focus {
@@ -204,7 +247,7 @@ hr {
 }
 .form-content form h1 {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .form-content form .name input:last-child {
   margin-left: 10px;
@@ -222,17 +265,44 @@ hr {
     display: none;
   }
   .form-content form {
-    width: 100%;
+    width: 80%;
     height: 550px;
   }
   .form-content form .name {
     display: flex;
-    flex-direction: column;
     justify-content: center;
   }
   .form-content form .name input:last-child {
+    margin-left: 15px;
+  }
+  .form-content form .pay-method {
+    display: flex;
+    justify-content: center;
     margin-left: 0;
+  }
+}
+@media (max-width: 568px) {
+  .form-content form {
+    height: 600px;
+  }
+  .form-content form p {
+    font-size: 10px;
+  }
+  .form-content form .name {
+    flex-direction: column;
+  }
+  .form-content form .name input:last-child {
     margin-top: 30px;
+    margin-left: 0;
+  }
+  .form-content form .serv {
+    margin-left: 8%;
+  }
+  .form-content form .serv label[for="free"] {
+    margin-left: 25%;
+  }
+  .form-content form .serv label[for="paid"] {
+    margin-left: 25%;
   }
 }
 /* end content */

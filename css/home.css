@@ -42,6 +42,9 @@ hr {
 .rotation {
   transform: rotateY(-180deg);
 }
+.flex {
+  display: flex;
+}
 /* small screen */
 @media (min-width: 768px) {
   .container,
