@@ -159,7 +159,7 @@ hr {
 .sign-up {
   display: none;
 }
-.sign-up form {
+.sign-up .signUpForm {
   width: 500px;
   height: 500px;
   display: flex;
@@ -174,13 +174,13 @@ hr {
   border: 1px solid var(--main-color);
   z-index: 2;
 }
-.sign-up form i {
+.sign-up .signUpForm i {
   position: absolute;
   top: 6px;
   right: 10px;
   color: var(--main-color);
 }
-.sign-up form h1 {
+.sign-up .signUpForm h1 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -219,7 +219,7 @@ hr {
   background-color: #a30101;
   color: white;
 }
-.sign-up form .private {
+.sign-up .signUpForm .private {
   margin-left: -35%;
 }
 .sign-up input[type="checkbox"] {
@@ -230,22 +230,22 @@ hr {
   cursor: pointer;
 }
 @media (max-width: 992px) {
-  .sign-up form {
+  .sign-up .signUpForm {
     left: 25%;
   }
 }
 @media (max-width: 767px) {
-  .sign-up form {
+  .sign-up .signUpForm {
     width: 350px;
     height: 550px;
     top: 60px;
     left: 4%;
   }
-  .sign-up form .private,
-  .sign-up form .Type-Gender {
+  .sign-up .signUpForm .private,
+  .sign-up .signUpForm .Type-Gender {
     margin-left: 10%;
   }
-  .sign-up form .Type-Gender label {
+  .sign-up .signUpForm .Type-Gender label {
     margin-left: 17%;
   }
 }

@@ -178,7 +178,7 @@ hr {
 }
 /* end photos */
 /* start content */
-.form-content form {
+.form-content .need-form {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -190,30 +190,30 @@ hr {
   border: 1px solid var(--main-color);
   border-radius: var(--radius);
 }
-.form-content form input,
-.form-content form select {
+.form-content .need-form input,
+.form-content .need-form select {
   width: 180px;
   height: 25px;
   border: 1px solid var(--main-color);
   border-radius: var(--radius);
   padding-left: 10px;
 }
-.form-content form input:focus,
-.form-content form select:focus {
+.form-content .need-form input:focus,
+.form-content .need-form select:focus {
   outline: 1px solid maroon;
 }
-.form-content form h1 {
+.form-content .need-form h1 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.form-content form .name input:last-child {
+.form-content .need-form .name input:last-child {
   margin-left: 10px;
 }
 @media (max-width: 992px) {
-  .form-content form {
+  .form-content .need-form {
     width: 80%;
   }
-  .form-content form .name input:last-child {
+  .form-content .need-form .name input:last-child {
     margin-left: 5px;
   }
 }
@@ -221,16 +221,16 @@ hr {
   .photos {
     display: none;
   }
-  .form-content form {
+  .form-content .need-form {
     width: 100%;
     height: 550px;
   }
-  .form-content form .name {
+  .form-content .need-form .name {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .form-content form .name input:last-child {
+  .form-content .need-form .name input:last-child {
     margin-left: 0;
     margin-top: 30px;
   }

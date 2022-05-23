@@ -167,7 +167,7 @@ hr {
   border-radius: 10px;
   border: 1px solid var(--main-color);
 }
-.content .right .sign-in form {
+.content .right .sign-in .signIn-form {
   display: flex;
   flex-direction: column;
   gap: 20px;

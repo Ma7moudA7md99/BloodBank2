@@ -184,7 +184,7 @@ hr {
 }
 /* end photos */
 /* start content */
-.form-content form {
+.form-content .donor-form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -197,66 +197,66 @@ hr {
   border: 1px solid var(--main-color);
   border-radius: var(--radius);
 }
-.form-content form p {
+.form-content .donor-form p {
   color: var(--main-color);
   font-size: 12px;
 }
-.form-content form div {
+.form-content .donor-form div {
   height: fit-content;
 }
-.form-content form input,
-.form-content form select {
+.form-content .donor-form input,
+.form-content .donor-form select {
   width: 200px;
   height: 25px;
   border: 1px solid var(--main-color);
   border-radius: var(--radius);
   padding-left: 10px;
 }
-.form-content form .diseases {
+.form-content .donor-form .diseases {
   display: none;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.form-content form .serv {
+.form-content .donor-form .serv {
   width: 100%;
   margin-left: 25%;
 }
-.form-content form .serv #free {
+.form-content .donor-form .serv #free {
   margin-right: 15%;
 }
-.form-content form .pay-method {
+.form-content .donor-form .pay-method {
   width: 100%;
   height: fit-content;
   margin-left: 32.5%;
 }
-.form-content form .pay-method #visa {
+.form-content .donor-form .pay-method #visa {
   display: none;
 }
-.form-content form input[type="submit"] {
+.form-content .donor-form input[type="submit"] {
   width: 80%;
 }
-.form-content form input[type="checkbox"],
-.form-content form input[type="radio"] {
+.form-content .donor-form input[type="checkbox"],
+.form-content .donor-form input[type="radio"] {
   width: 10px;
   display: inline-block;
 }
-.form-content form input:focus,
-.form-content form select:focus {
+.form-content .donor-form input:focus,
+.form-content .donor-form select:focus {
   outline: 1px solid maroon;
 }
-.form-content form h1 {
+.form-content .donor-form h1 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.form-content form .name input:last-child {
+.form-content .donor-form .name input:last-child {
   margin-left: 10px;
 }
 @media (max-width: 992px) {
-  .form-content form {
+  .form-content .donor-form {
     width: 80%;
   }
-  .form-content form .name input:last-child {
+  .form-content .donor-form .name input:last-child {
     margin-left: 5px;
   }
 }
@@ -264,44 +264,44 @@ hr {
   .photos {
     display: none;
   }
-  .form-content form {
+  .form-content .donor-form {
     width: 80%;
     height: 550px;
   }
-  .form-content form .name {
+  .form-content .donor-form .name {
     display: flex;
     justify-content: center;
   }
-  .form-content form .name input:last-child {
+  .form-content .donor-form .name input:last-child {
     margin-left: 15px;
   }
-  .form-content form .pay-method {
+  .form-content .donor-form .pay-method {
     display: flex;
     justify-content: center;
     margin-left: 0;
   }
 }
 @media (max-width: 568px) {
-  .form-content form {
+  .form-content .donor-form {
     height: 600px;
   }
-  .form-content form p {
+  .form-content .donor-form p {
     font-size: 10px;
   }
-  .form-content form .name {
+  .form-content .donor-form .name {
     flex-direction: column;
   }
-  .form-content form .name input:last-child {
+  .form-content .donor-form .name input:last-child {
     margin-top: 30px;
     margin-left: 0;
   }
-  .form-content form .serv {
+  .form-content .donor-form .serv {
     margin-left: 8%;
   }
-  .form-content form .serv label[for="free"] {
+  .form-content .donor-form .serv label[for="free"] {
     margin-left: 25%;
   }
-  .form-content form .serv label[for="paid"] {
+  .form-content .donor-form .serv label[for="paid"] {
     margin-left: 25%;
   }
 }
